@@ -2,10 +2,10 @@ package ch01;
 
 import java.util.Iterator;
 
-public class BookIterator implements Iterator<Book> {
+public class BookShelfIterator implements Iterator<Book> {
     private BookShelf bookShelf;
     private int index;
-    public BookIterator(BookShelf bookShelf) {
+    public BookShelfIterator(BookShelf bookShelf) {
         this.bookShelf = bookShelf;
     }
     @Override

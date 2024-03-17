@@ -1,7 +1,5 @@
 package ch01;
 
-import java.util.Iterator;
-
 public class BookShelf implements Iterable<Book>{
     Book books[];
     int index = 0;
@@ -25,7 +23,7 @@ public class BookShelf implements Iterable<Book>{
     }
 
     @Override
-    public Iterator<Book> iterator() {
-        return new BookIterator(this);
+    public BookShelfIterator iterator() {
+        return new BookShelfIterator(this);
     }
 }
