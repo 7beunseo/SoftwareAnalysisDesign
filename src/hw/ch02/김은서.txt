@@ -1,5 +1,5 @@
 #written by FileProperties
-#Thu Mar 21 16:59:21 KST 2024
+#Thu Mar 21 17:03:46 KST 2024
 Year=2024
 BornYear=2003
 width=640
