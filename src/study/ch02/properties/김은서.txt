@@ -1,0 +1,8 @@
+#written by FileProperties
+#Thu Mar 21 16:47:18 KST 2024
+Year=2024
+BornYear=2003
+width=640
+StudentId=20220961
+Name=eunseo
+Location=Gumi, Gyeongsangbuk-do
