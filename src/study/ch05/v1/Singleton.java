@@ -1,4 +1,4 @@
-package hw.ch05.v1;
+package study.ch05.v1;
 
 /**
  * 싱글톤 생성 방법 1

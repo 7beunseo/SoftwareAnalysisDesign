@@ -1,4 +1,4 @@
-package hw.ch05.v_enum.v1;
+package study.ch05.v_enum.v1;
 
 public enum Singleton {
     INSTANCE;
