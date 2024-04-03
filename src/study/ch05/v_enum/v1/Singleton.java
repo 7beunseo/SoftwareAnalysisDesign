@@ -6,4 +6,8 @@ public enum Singleton {
         System.out.println("hello is called");
     }
 
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+
 }
