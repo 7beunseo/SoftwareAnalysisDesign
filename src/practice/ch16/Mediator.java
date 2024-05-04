@@ -1,4 +1,4 @@
-package study.ch16;
+package practice.ch16;
 
 public interface Mediator {
     void createColleagues();
