@@ -1,4 +1,4 @@
-package study.ch190;
+package practice.ch19;
 
 public interface Context {
     void setClock(int hour);
