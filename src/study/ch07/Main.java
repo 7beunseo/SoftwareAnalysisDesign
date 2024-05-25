@@ -12,7 +12,10 @@ public class Main {
         Director d2 = new Director(hb1);
         d2.construct();
         System.out.println(hb1.getHTMLResult() + " Is created");
+
+        FrameBuilder fb1 = new FrameBuilder();
+        Director d3 = new Director(fb1);
+        d3.construct();
+        fb1.getFrameResult().setVisible(true);
     }
-
-
 }
