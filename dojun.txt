@@ -1,0 +1,5 @@
+<!DOCTYPE html><html><head><title>dojun's web page</title></head><body>
+<h1>dojun's web page</h1>
+<p>Welcome to dojun's web page!</p>
+<p>Nice to meet you!</p>
+<a href="mailto:dojun@example.com">dojun</a></body></html>
