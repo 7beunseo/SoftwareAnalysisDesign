@@ -9,29 +9,29 @@ public class HtmlWriter {
         this.writer = writer;
     }
     public void title(String title) throws IOException {
-        writer.write("<!DOCTYPE html>");
-        writer.write("<html>");
-        writer.write("<head>");
-        writer.write("<title>" + title + "</title>");
-        writer.write("</head>");
-        writer.write("<body>");
-        writer.write("\n");
-        writer.write("<h1>" + title + "</h1>");
-        writer.write("\n");
+        String myhtml = """
+                <!DOCTYPE html>
+                    <html>
+                         <head>
+                              <title>%s</title>
+                         </head>
+                         <body>
+                            <h1>%s</h1>
+                """.formatted(title, title);
+        writer.write(myhtml);
     }
-
-    public void paragraph(String str) throws IOException {
+    public void paragraph(String str) throws IOException{
         writer.write("<p>" + str + "</p>\n");
     }
-    public void link(String href, String username) throws IOException {
-        writer.write("<a href=\"" + href +"\">" + username + "</a>\n");
+    public void link(String href, String str) throws IOException{
+        paragraph("<a href=\"" + href + "\">" + str + "</a>");
     }
-    public void maileto(String mailaddr, String username) throws IOException{
+    public void mailto(String mailaddr, String username) throws IOException{
         link("mailto:" + mailaddr, username);
     }
-    public void close() throws IOException {
-        writer.write("</body>");
-        writer.write("</html>");
+    public void close() throws IOException{
+        writer.write("</body>\n");
+        writer.write("</html>\n");
         writer.close();
     }
 }

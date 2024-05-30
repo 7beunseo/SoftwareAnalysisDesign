@@ -6,19 +6,35 @@ import java.util.Properties;
 
 public class PageMaker {
     private PageMaker() {}
+
+    // mail
     public static void makeWelcomePage(String mailaddr, String filename) {
         try {
-            Properties prop = Database.getProperties("maildata");
-            String username = prop.getProperty(mailaddr);
+            Properties mailProp = Database.getProperties("maildata");
+            String username = mailProp.getProperty(mailaddr);
             HtmlWriter writer = new HtmlWriter(new FileWriter(filename));
-            writer.title("welcome to " + username + "'s page");
-            writer.paragraph("Welcome to " + username + "'s web page!");
-            writer.paragraph("Nice to meet you!");
-            writer.maileto(mailaddr, username);
+            writer.title("eunseo");
+            writer.mailto(mailaddr, username);
             writer.close();
-            System.out.println(filename + " created");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    // link
+    public static void makeLinkPage(String filename) {
+        try {
+            Properties linkProp = Database.getProperties("maildata");
+            HtmlWriter writer = new HtmlWriter(new FileWriter(filename));
+            writer.title("Mail Link");
+            for(String data : linkProp.stringPropertyNames()) {
+                String username = linkProp.getProperty(data);
+                writer.mailto(data, username);
+            }
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
